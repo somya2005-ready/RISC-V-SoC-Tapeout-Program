@@ -1,7 +1,70 @@
-Task 1 : 
-Notes on 1st lecture :"Dgital VLSI SoC [Semiconductor On Chip ] Design & Planning "
-
-Chip Modelling :
-A Chip Taped out by VSD : VSDSquadron
-
 *VSDSquadron :VSDSquadron, a cutting-edge development board based on the RISC-V architecture that is fully open-source. This board presents an exceptional opportunity for individuals to learn about RISC-V and VLSI chip design utilizing only open-source tools, starting from the RTL and extending all the way to the GDSII.
+# Week 0  
+
+## 📝 Task 1 – Create GitHub Repository & Notes on Lecture 1  
+
+### ✅ Task 1.1 – Repository Creation  
+- Created this GitHub repository to document my week-by-week progress in the **VSD SoC Tapeout Program**.  
+- Structured it with folders for each week’s tasks, notes, and outputs.  
+
+---
+
+### 📝 Task 1.2 – Notes on Lecture 1  
+**Lecture:** *Digital VLSI SoC (Semiconductor On Chip) Design & Planning*  
+
+---
+
+### 📌 Chip Modelling  
+
+**Chip Taped Out by VSD:** `VSDSquadron`  
+
+> **VSDSquadron** is a cutting-edge development board based on the **RISC-V architecture**, fully open-source.  
+> It offers an excellent opportunity for students and enthusiasts to learn about **RISC-V** and **VLSI chip design** using **open-source tools**, from **RTL to GDSII**.  
+
+---
+
+### 🔑 Key Concepts  
+
+#### 1. **Chip Modelling**  
+- **C Model + GCC:**  
+  - Applications are typically written in **C language**.  
+  - First step: Check if the application is constructed correctly.  
+  - Use **GCC compiler** (`O0` vs `O1` optimizations).  
+    - **O0** = No optimization (raw C model)  
+    - **O1** = Optimized version  
+  - Testbench is written in **C language** to verify design behavior.  
+
+---
+
+### 🧠 Flow of Chip Design  
+
+1. **Model Specifications** in C format  
+2. **Test Application** in C (functionality check)  
+3. **RTL Architecture**  
+   - **Processor** → Gate Level Netlist (Synthesized)  
+   - **Peripherals / IPs**  
+     - Macros (Synthesized RTL)  
+     - Analog IPs + Functional RTL  
+4. **SoC Integration**  
+   - Combine processor, peripherals, macros  
+   - Perform **RTL to GDSII flow**  
+   - **DRC / LVS checks** on layout  
+5. **Verification with Testbench**  
+   - Peripherals connected to test environment  
+   - Examples: iWatch, Arduino boards, TV panel, AC controllers  
+   - Target operating frequency: **100 MHz – 130 MHz**  
+
+---
+
+### 🧩 Key Takeaways  
+- **C modelling is the first step** before RTL design.  
+- **GCC** plays a crucial role in compiling and testing the C model of the chip.  
+- The **RTL to GDSII flow** includes synthesis, P&R, and signoff (DRC/LVS).  
+- **Testbenches** are essential to validate SoC functionality with real-world peripherals.  
+- Understanding **processor + peripheral integration** is key to becoming a successful SoC designer.  
+
+---
+
+
+
+
